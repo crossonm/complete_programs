@@ -1,0 +1,22 @@
+
+/* Write a function that returns the sum of the numbers in the array, 
+returning 0 for an empty array. Except the number 13 is very unlucky, 
+so it does not count and numbers that come immediately after a 13 also 
+do not count.  */
+
+function sumArray(givenArray) {
+givenArrayLength = givenArray.length //get number of elements
+sumBucket = 0 //initialize the sumBucket
+for (i=0;i<givenArrayLength;i++){
+    if (givenArray[i] == 13)
+    {sumBucket = sumBucket} // no change in value if element == 13
+    else if (givenArray[i-1]==13)
+    {sumBucket = sumBucket} // no change in value if previous element == 13
+    else
+    {sumBucket = sumBucket + givenArray[i]} //otherwise, add it
+}
+console.log(sumBucket)
+}
+
+myArray =[1,2,13,11,3]
+sumArray(myArray)
