@@ -1,0 +1,15 @@
+
+/* Next, write a sum function that takes an array of numbers and returns the 
+sum of these numbers. */
+
+function sumArray(givenArray) {
+givenArrayLength = givenArray.length
+sumBucket = 0
+for (i=0;i<givenArrayLength;i++){
+    sumBucket = sumBucket + givenArray[i]
+}
+console.log(sumBucket)
+}
+
+myArray =[1,2,3,4]
+sumArray(myArray)
