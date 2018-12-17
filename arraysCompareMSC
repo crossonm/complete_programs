@@ -1,0 +1,41 @@
+/* Write a program to find common elements between two arrays */
+
+/* Create a function that takes in two arrays.
+ * Declare a blank array for the output.
+ * Get length of inArray1
+ * Until you hit the end of inArray1, do
+    * read element of inArray1
+    * Until you hit the end of inArray2, read element of inArray2
+    * if the element matches the current element of inArray1, push it into commonElements
+* console.log outAray    */
+
+function arraysCompare(inArray1, inArray2) {
+    var commonElements = []
+    var length_inArray1 = inArray1.length
+    var length_inArray2 = inArray2.length
+
+    //console.log("inArray1 length is: " + length_inArray1)
+    //console.log("inArray2.length is: " + length_inArray2)
+
+    for (i = 0; i < length_inArray1; i++) {
+        //console.log(("i is now: "+ i))
+        for (counter = 0; counter < length_inArray2; counter++){
+            //console.log("counter is now: "+ counter)
+            if (inArray1[i] == inArray2[counter]) {
+                //console.log(inArray1[i])
+                commonElements.push(inArray1[i])
+            }// end of if 
+        } //end of inner for loop
+
+
+    } //end of outer for loop
+    console.log("The elements in common are: " + commonElements)
+} //end of function
+
+
+// Pass in some arguments
+inArray1 = [1,2,3,4,5]
+inArray2 = [4,5,6,7,8]
+
+arraysCompare(inArray1,inArray2)
+
